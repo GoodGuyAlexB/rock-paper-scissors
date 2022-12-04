@@ -1,7 +1,7 @@
 
 function getPlayerChoice(){
     let playerChoice = prompt("Please choose rock paper scissors")
-    const playerChoiceText = playerChoice.toUpperCase()
+    let playerChoiceText = playerChoice.toUpperCase()
     if (playerChoiceText == "ROCK") {
     playerChoiceNumber = 1
     } else if (playerChoiceText == "PAPER") {
@@ -9,10 +9,12 @@ function getPlayerChoice(){
     } else if (playerChoiceText == "SCISSORS"){
     playerChoiceNumber = 3
     } else {
-    window.alert("Invalid input")
+    playerChoiceNumber = 0
     }
+    
+    
 }
-
+console.log(getPlayerChoice(), playerChoiceText)
 
 function getComputerChoice() {
    let  compChoiceNum = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
@@ -27,8 +29,15 @@ function getComputerChoice() {
         else {
             compChoiceText = "Invalid"
         }
+        return compChoiceNum
     }
-    console.log(getPlayerChoice(), getComputerChoice(), compChoiceText, playerChoiceNumber);
+
+
+
+ 
+
+
+    
     
  
     
